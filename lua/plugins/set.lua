@@ -38,3 +38,5 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+vim.g.sessions_root = vim.fn.stdpath("config") .. "/nvim/sessions"

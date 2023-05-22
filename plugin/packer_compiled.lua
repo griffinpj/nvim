@@ -180,6 +180,11 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-obsession"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    url = "https://github.com/griffinpj/vim-obsession"
+  },
   ["vim-smoothie"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-smoothie",

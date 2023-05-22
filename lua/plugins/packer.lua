@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
     use ('mbbill/undotree')
     use ('tpope/vim-fugitive')
     use ('tpope/vim-commentary')
+    use ('griffinpj/vim-obsession')
+
     use ('mhinz/vim-startify')
     use ('psliwka/vim-smoothie');
 
