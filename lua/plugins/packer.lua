@@ -8,14 +8,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use { "bluz71/vim-moonfly-colors", as = "moonfly", config = function () 
-        vim.cmd('colorscheme moonfly')
-    end  }
+    -- use { "bluz71/vim-moonfly-colors", as = "moonfly", config = function ()
+    --     vim.cmd('colorscheme moonfly')
+    -- end  }
 
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-treesitter/nvim-treesitter-context')
@@ -27,7 +27,30 @@ return require('packer').startup(function(use)
     use ('griffinpj/vim-obsession')
 
     use ('mhinz/vim-startify')
-    use ('psliwka/vim-smoothie');
+    -- Better Vim Scrolling --
+    use ('karb94/neoscroll.nvim')
+
+    -- xcode dark theme
+    use { "arzg/vim-colors-xcode", as = "xcode", config = function ()
+        vim.cmd('colorscheme xcode')
+    end }
+    -- use ('folke/tokyonight.nvim')
+
+
+    -- use({
+    --     "utilyre/barbecue.nvim",
+    --     tag = "*",
+    --     requires = {
+    --         "SmiteshP/nvim-navic",
+    --         "nvim-tree/nvim-web-devicons", -- optional dependency
+    --     },
+    --     after = "nvim-web-devicons"
+    -- })
+
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    -- }
 
     -- Better Find and Replace '\ + r + a
     use ('kqito/vim-easy-replace')

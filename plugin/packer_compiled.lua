@@ -114,11 +114,10 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  moonfly = {
-    config = { "\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme moonfly\bcmd\bvim\0" },
+  ["neoscroll.nvim"] = {
     loaded = true,
-    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/moonfly",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -185,23 +184,24 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-obsession",
     url = "https://github.com/griffinpj/vim-obsession"
   },
-  ["vim-smoothie"] = {
-    loaded = true,
-    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-smoothie",
-    url = "https://github.com/psliwka/vim-smoothie"
-  },
   ["vim-startify"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  xcode = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme xcode\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/xcode",
+    url = "https://github.com/arzg/vim-colors-xcode"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: moonfly
-time([[Config for moonfly]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme moonfly\bcmd\bvim\0", "config", "moonfly")
-time([[Config for moonfly]], false)
+-- Config for: xcode
+time([[Config for xcode]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme xcode\bcmd\bvim\0", "config", "xcode")
+time([[Config for xcode]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
