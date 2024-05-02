@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/image.nvim",
     url = "https://github.com/samodostal/image.nvim"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -188,20 +198,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
-  },
-  xcode = {
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme xcode\bcmd\bvim\0" },
-    loaded = true,
-    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/xcode",
-    url = "https://github.com/arzg/vim-colors-xcode"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: xcode
-time([[Config for xcode]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme xcode\bcmd\bvim\0", "config", "xcode")
-time([[Config for xcode]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

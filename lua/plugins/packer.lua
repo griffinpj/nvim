@@ -13,9 +13,16 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- use { "bluz71/vim-moonfly-colors", as = "moonfly", config = function ()
-    --     vim.cmd('colorscheme moonfly')
-    -- end  }
+    -- Obsidian
+    use({
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+            -- see below for full list of optional dependencies 👇
+        }
+    })
 
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-treesitter/nvim-treesitter-context')
@@ -25,32 +32,31 @@ return require('packer').startup(function(use)
     use ('tpope/vim-fugitive')
     use ('tpope/vim-commentary')
     use ('griffinpj/vim-obsession')
-
     use ('mhinz/vim-startify')
     -- Better Vim Scrolling --
     use ('karb94/neoscroll.nvim')
 
-    -- xcode dark theme
-    use { "arzg/vim-colors-xcode", as = "xcode", config = function ()
-        vim.cmd('colorscheme xcode')
-    end }
-    -- use ('folke/tokyonight.nvim')
-
-
-    -- use({
-    --     "utilyre/barbecue.nvim",
-    --     tag = "*",
-    --     requires = {
-    --         "SmiteshP/nvim-navic",
-    --         "nvim-tree/nvim-web-devicons", -- optional dependency
-    --     },
-    --     after = "nvim-web-devicons"
-    -- })
-
+    -- -- Lua
     -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    --     "folke/which-key.nvim",
+    --     config = function()
+    --         vim.o.timeout = true
+    --         vim.o.timeoutlen = 300
+    --         require("which-key").setup {
+    --             -- your configuration comes here
+    --             -- or leave it empty to use the default settings
+    --             -- refer to the configuration section below
+    --         }
+    --     end
     -- }
+
+    -- xcode dark theme
+    -- use { "arzg/vim-colors-xcode", as = "xcode", config = function ()
+    --     vim.cmd('colorscheme xcode')
+    -- end }
+
+    -- KANAGAWA.nvim
+    use ('rebelot/kanagawa.nvim')
 
     -- Better Find and Replace '\ + r + a
     use ('kqito/vim-easy-replace')

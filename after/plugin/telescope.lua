@@ -1,27 +1,34 @@
 require('telescope').setup {
-    defaults = {
-        layout_config = {
-        }
-    },
     pickers = {
         live_grep = {
+            vimgrep_args = { "--fixed-strings", },
             theme = "dropdown",
-            vertical = { width = 0.9 },
-            path_display = "smart"
+            path_display = "smart",
+            layout_config = {
+                width = 0.8,
+                height = 0.5
+            }
         },
         find_files = {
             theme = "dropdown",
-            vertical = { width = 0.9 },
-            path_display = "smart"
+            path_display = "smart",
+            layout_config = {
+                width = 0.8,
+                height = 0.5
+            }
         },
         git_files = {
             theme = "dropdown",
-            vertical = { width = 0.9 },
-            path_display = "smart"
+            path_display = "smart",
+            layout_config = {
+                width = 0.8,
+                height = 0.5
+            }
         }
     },
     extensions = {}
 }
+
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
