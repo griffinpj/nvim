@@ -14,15 +14,15 @@ return require('packer').startup(function(use)
     }
 
     -- Obsidian
-    use({
-        "epwalsh/obsidian.nvim",
-        tag = "*",  -- recommended, use latest release instead of latest commit
-        requires = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-            -- see below for full list of optional dependencies 👇
-        }
-    })
+    -- use({
+    --     "epwalsh/obsidian.nvim",
+    --     tag = "*",  -- recommended, use latest release instead of latest commit
+    --     requires = {
+    --         -- Required.
+    --         "nvim-lua/plenary.nvim",
+    --         -- see below for full list of optional dependencies 👇
+    --     }
+    -- })
 
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-treesitter/nvim-treesitter-context')
