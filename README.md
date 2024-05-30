@@ -48,6 +48,7 @@ instance with `p`.
 results in highlighted portion overriding current paste buffer. 
 
 #### Navigation
+> telescope.nvim offers a modal with fuzzy match for files and file contents
 
 `<leader>pf` -> Fuzzy find project files (files in CWD)
 
@@ -56,6 +57,39 @@ results in highlighted portion overriding current paste buffer.
 `<leader>pv` -> Navigate to netrw page for active file's directory
 
 `<leader>ps` -> Live grep to search within files (don't forget to escape necessary characters)
+
+##### Navigating search results
+> Within a telescope search, you can use nvim shortcuts to navigate the modal.
+
+`CTL + u` -> Scroll up in preview window
+
+`CTL + d` -> Scroll down in preview window
+
+`CTL + n` -> Next search result (any mode)
+
+`CTL + p` -> Previous search result (any mode)
+
+`CTL + c` -> Close telescope (insert mode)
+
+`ESC` -> Close telescope (normal mode)
+
+`jk` -> Enter normal mode within the modal
+
+> While in normal mode in the telescope modal,
+
+- `h` and `l` will allow for navigation on the search line
+- `j` and `k` will allow for navigation within search results
+- Other vim commands will work on the search line while in this mode within
+telescope
+
+##### Opening search results
+> While selecting a telescope search result, you have various options on how to open the result.
+
+`CTL + v` -> Opens the selection in a veritcal pane in the current buffer
+
+`CTL + x` -> Opens the selection in a horizontal pane in the current buffer
+
+`CTL + t` -> Opens the selection in a new tab
 
 ##### Harpoon
 
@@ -81,6 +115,8 @@ results in highlighted portion overriding current paste buffer.
 `K` -> While your cursour is over any text object will show symbol information
 
 `<leader>vrn` -> While your cursor is over any symbol, rename that symbol
+
+`<leader>vrr` -> While your cursor is over any symbol, show symbol references
 
 `<leader>f` -> LSP Format file
 
