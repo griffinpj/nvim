@@ -36,6 +36,14 @@ return require('packer').startup(function(use)
     -- Better Vim Scrolling --
     use ('karb94/neoscroll.nvim')
 
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    })
+
     -- -- Lua
     -- use {
     --     "folke/which-key.nvim",
@@ -60,6 +68,9 @@ return require('packer').startup(function(use)
 
     -- Better Find and Replace '\ + r + a
     use ('kqito/vim-easy-replace')
+
+    -- Auto remove white space for me please
+    use ('ntpeters/vim-better-whitespace')
 
     use {
         'VonHeikemen/lsp-zero.nvim',

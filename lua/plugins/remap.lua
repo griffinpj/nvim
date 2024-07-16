@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
-vim.keymap.set("n", ";", ":")
+vim.keymap.set("n", "'", ":")
 
 -- allows to move highlighted lines with J K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
