@@ -8,21 +8,22 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        -- or                            , branch = '0.1.x',
+        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- Obsidian
-    -- use({
-    --     "epwalsh/obsidian.nvim",
-    --     tag = "*",  -- recommended, use latest release instead of latest commit
-    --     requires = {
-    --         -- Required.
-    --         "nvim-lua/plenary.nvim",
-    --         -- see below for full list of optional dependencies 👇
-    --     }
-    -- })
+    use({
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+            -- Completion of note references
+            -- "hrsh7th/nvim-cmp.nvim",  why you no install
+            -- see below for full list of optional dependencies 👇
+        }
+    })
 
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-treesitter/nvim-treesitter-context')
@@ -31,7 +32,6 @@ return require('packer').startup(function(use)
     use ('mbbill/undotree')
     use ('tpope/vim-fugitive')
     use ('tpope/vim-commentary')
-    use ('griffinpj/vim-obsession')
     use ('mhinz/vim-startify')
     -- Better Vim Scrolling --
     use ('karb94/neoscroll.nvim')
@@ -44,24 +44,13 @@ return require('packer').startup(function(use)
         run = "make install_jsregexp"
     })
 
-    -- -- Lua
-    -- use {
-    --     "folke/which-key.nvim",
-    --     config = function()
-    --         vim.o.timeout = true
-    --         vim.o.timeoutlen = 300
-    --         require("which-key").setup {
-    --             -- your configuration comes here
-    --             -- or leave it empty to use the default settings
-    --             -- refer to the configuration section below
-    --         }
-    --     end
-    -- }
-
-    -- xcode dark theme
-    -- use { "arzg/vim-colors-xcode", as = "xcode", config = function ()
-    --     vim.cmd('colorscheme xcode')
-    -- end }
+    use({
+        "giusgad/pets.nvim",
+        requires = {
+            "giusgad/hologram.nvim",
+            "MunifTanjim/nui.nvim",
+        }
+    })
 
     -- KANAGAWA.nvim
     use ('rebelot/kanagawa.nvim')
@@ -72,13 +61,15 @@ return require('packer').startup(function(use)
     -- Auto remove white space for me please
     use ('ntpeters/vim-better-whitespace')
 
+    -- better folding
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
+        branch = 'v3.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
+            {
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
@@ -86,13 +77,15 @@ return require('packer').startup(function(use)
             },
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
+            {'neovim/nvim-lspconfig'},             -- Required
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},     -- Required
             {'hrsh7th/cmp-nvim-lsp'}, -- Required
             {'L3MON4D3/LuaSnip'},     -- Required
         }
-
     }
+
+    -- Renders images in nvim w/ ASCII
     use {
       'samodostal/image.nvim',
       requires = {
@@ -100,5 +93,4 @@ return require('packer').startup(function(use)
         { 'm00qek/baleia.nvim', tag = 'v1.3.0' }
       }
     }
-
 end)

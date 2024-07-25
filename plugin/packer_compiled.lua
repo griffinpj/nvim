@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["hologram.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/hologram.nvim",
+    url = "https://github.com/giusgad/hologram.nvim"
+  },
   ["image.nvim"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/image.nvim",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -144,10 +154,25 @@ _G.packer_plugins = {
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pets.nvim"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/pets.nvim",
+    url = "https://github.com/giusgad/pets.nvim"
   },
   playground = {
     loaded = true,
@@ -158,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -188,11 +218,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-obsession"] = {
-    loaded = true,
-    path = "/Users/gjohnson/.local/share/nvim/site/pack/packer/start/vim-obsession",
-    url = "https://github.com/griffinpj/vim-obsession"
   },
   ["vim-startify"] = {
     loaded = true,

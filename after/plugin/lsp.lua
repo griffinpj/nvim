@@ -2,15 +2,6 @@ local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
 
-lsp.ensure_installed({
-	'tsserver',
-	'lua_ls',
-	'rust_analyzer',
-    'eslint',
-    'cssls'
-})
-
-
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mapping = lsp.defaults.cmp_mappings({
@@ -18,11 +9,6 @@ local cmp_mapping = lsp.defaults.cmp_mappings({
 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 	['<C-y>'] = cmp.mapping.confirm({ select = true }),
 	["<C-Space>"] = cmp.mapping.complete(),
-})
-
-
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
 })
 
 lsp.set_preferences({
@@ -46,5 +32,17 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    -- Replace the language servers listed here
+    -- with the ones you want to install
+    ensure_installed = {'tsserver', 'rust_analyzer'},
+    handlers = {
+        function(server_name)
+            require('lspconfig')[server_name].setup({})
+        end,
+    },
+})
 
 lsp.setup()
