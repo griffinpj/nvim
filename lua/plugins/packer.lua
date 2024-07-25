@@ -7,32 +7,45 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+
+    -- -- Obsidian
+    -- use({
+    --     "epwalsh/obsidian.nvim",
+    --     tag = "*",  -- recommended, use latest release instead of latest commit
+    --     requires = {
+    --         -- Required.
+    --         "nvim-lua/plenary.nvim",
+    --         -- Completion of note references
+    --         -- "hrsh7th/nvim-cmp.nvim",  why you no install
+    --         -- see below for full list of optional dependencies 👇
+    --     }
+    -- })
+
+    -- Git plugins
+    use ('tpope/vim-fugitive')
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
+
+    -- File navigation
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- Obsidian
-    use({
-        "epwalsh/obsidian.nvim",
-        tag = "*",  -- recommended, use latest release instead of latest commit
-        requires = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-            -- Completion of note references
-            -- "hrsh7th/nvim-cmp.nvim",  why you no install
-            -- see below for full list of optional dependencies 👇
-        }
-    })
-
-    use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use ('nvim-treesitter/nvim-treesitter-context')
-    use ('nvim-treesitter/playground')
     use ('theprimeagen/harpoon')
     use ('mbbill/undotree')
-    use ('tpope/vim-fugitive')
+
+    -- better commenting
     use ('tpope/vim-commentary')
+
+    -- Vim start screen
     use ('mhinz/vim-startify')
+
     -- Better Vim Scrolling --
     use ('karb94/neoscroll.nvim')
 
@@ -52,8 +65,11 @@ return require('packer').startup(function(use)
         }
     })
 
-    -- KANAGAWA.nvim
-    use ('rebelot/kanagawa.nvim')
+    -- netrw buffer-style
+    use {"stevearc/oil.nvim"}
+
+    -- Training wheels for motions
+    use {"tris203/precognition.nvim"}
 
     -- Better Find and Replace '\ + r + a
     use ('kqito/vim-easy-replace')
@@ -64,6 +80,11 @@ return require('packer').startup(function(use)
     -- better folding
     use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
+    -- LSP Setup --
+
+    use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use ('nvim-treesitter/nvim-treesitter-context')
+    use ('nvim-treesitter/playground')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',

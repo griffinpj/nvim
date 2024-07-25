@@ -2,31 +2,45 @@ require('telescope').setup({
     pickers = {
         live_grep = {
             vimgrep_args = { "--fixed-strings", },
-            theme = "dropdown",
             path_display = "smart",
             layout_config = {
-                width = 0.8,
-                height = 0.5
+                horizontal = {
+                    width = 0.95,
+                    preview_width = 0.6
+                }
             }
         },
         find_files = {
-            theme = "dropdown",
             path_display = "smart",
             layout_config = {
-                width = 0.8,
-                height = 0.5
+                horizontal = {
+                    width = 0.95,
+                    preview_width = 0.6
+                }
             }
         },
         git_files = {
-            theme = "dropdown",
             path_display = "smart",
             layout_config = {
-                width = 0.8,
-                height = 0.5
+                horizontal = {
+                    width = 0.95,
+                    preview_width = 0.6
+                }
             }
         }
     },
-    extensions = {}
+    extensions = {
+        themes = {
+            layout_config = {
+                horizontal = {
+                    width = 0.8,
+                    height = 0.6
+                }
+            },
+            enable_previewer = true,
+            enable_live_preview = true,
+        }
+    }
 })
 
 
