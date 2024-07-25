@@ -1,3 +1,5 @@
+local vim = vim
+
 vim.filetype.add({
     extension = {
         ejs = "html"
@@ -7,7 +9,7 @@ vim.filetype.add({
 vim.opt.guicursor = ""
 
 -- relative line numbering
-vim.opt.nu = true 
+vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- spacing setup
