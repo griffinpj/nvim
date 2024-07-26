@@ -8,18 +8,21 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
 
+    -- Theme
+    use { "scottmckendry/cyberdream.nvim" }
+
     -- -- Obsidian
-    -- use({
-    --     "epwalsh/obsidian.nvim",
-    --     tag = "*",  -- recommended, use latest release instead of latest commit
-    --     requires = {
-    --         -- Required.
-    --         "nvim-lua/plenary.nvim",
-    --         -- Completion of note references
-    --         -- "hrsh7th/nvim-cmp.nvim",  why you no install
-    --         -- see below for full list of optional dependencies 👇
-    --     }
-    -- })
+    use({
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+            -- Completion of note references
+            -- "hrsh7th/nvim-cmp.nvim",  why you no install
+            -- see below for full list of optional dependencies 👇
+        }
+    })
 
     -- Git plugins
     use ('tpope/vim-fugitive')
