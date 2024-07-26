@@ -1,8 +1,7 @@
 # nvim
 
-Packer and lua setup for nvim.
+ Lua setup for nvim built on lazy.nvim
 
-Inspired by theprimeagen/init.lua
 
 ## What the heck is this ?!?! How do I use ?!?
 
@@ -11,18 +10,7 @@ This readme shall be your lighthouse. A beacon of hope in the dark stormy waters
 
 ## The CONFIG
 
-`./after/plugin` -> Directory for plugin configuration "after" loading
-
-`./lua/plugins` -> Directory where general neovim configuration happens
-
-`./lua/plugins/packer.lua` -> File where new plugins are added
-
-`:PackerInstall` -> Install plugins after adding new plugin
-
-`:PackerClean` -> Remove disabled or unused plugins
-
-`:PackerSync` -> Sync plugins after editing plugin configs
-
+TBD ... migrating to lazy.nvim
 
 Now let's start at,
 
