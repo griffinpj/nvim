@@ -2,7 +2,6 @@ require('telescope').setup({
     pickers = {
         live_grep = {
             vimgrep_args = { "--fixed-strings", },
-            path_display = "smart",
             layout_config = {
                 horizontal = {
                     width = 0.95,
@@ -11,7 +10,6 @@ require('telescope').setup({
             }
         },
         find_files = {
-            path_display = "smart",
             layout_config = {
                 horizontal = {
                     width = 0.95,
@@ -20,7 +18,6 @@ require('telescope').setup({
             }
         },
         git_files = {
-            path_display = "smart",
             layout_config = {
                 horizontal = {
                     width = 0.95,

@@ -4,5 +4,5 @@ require("cyberdream").setup({
     italic_comments = true,
     hide_fillchars = true,
 })
-
 vim.cmd("colorscheme cyberdream")
+
