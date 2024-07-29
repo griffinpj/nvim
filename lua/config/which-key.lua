@@ -6,7 +6,7 @@ wk.add({
     { "<leader>p", group = "search" },
     { "<leader>m", group = "motions" },
     { "<leader>g", group = "git" },
-    { "<leader>l", group = "Lazy" },
+    { "<leader>l", group = "lazy" },
     { "<leader>r", group = "replace" },
     { "<leader>u", desc = "View undotree" },
     -- { "<leader>fb", function() print("hello") end, desc = "Foobar" },
@@ -22,7 +22,7 @@ wk.add({
     { "<leader>P", [["_dP]], desc = "Paste over selection and keep clipboard" },
     { "<leader>ff", vim.lsp.buf.format, desc = 'Format file' },
     { "<leader>fx", "<cmd>!chmod +x %<CR>", desc = "Set file as executable" },
-    { "<leader>fq", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
+    { "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
     { "<leader>fw", "<cmd>w<cr>", desc = "Write" },
     { "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = 'Replace string' },
     {
