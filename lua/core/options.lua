@@ -38,7 +38,9 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
-vim.opt.colorcolumn = "80"
-
 vim.g.sessions_root = vim.fn.stdpath("config") .. "/nvim/sessions"
+
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true

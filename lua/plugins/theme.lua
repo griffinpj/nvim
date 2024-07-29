@@ -1,5 +1,5 @@
     return {
-        "scottmckendry/cyberdream.nvim",
+        "rebelot/kanagawa.nvim",
         config = function ()
             require("config.theme")
         end

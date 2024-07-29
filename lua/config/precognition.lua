@@ -8,5 +8,5 @@ preCog.setup({
 
 preCog.toggle()
 
-vim.keymap.set('n', '<leader>mt', preCog.toggle, {})
-vim.keymap.set('n', '<leader>mp', preCog.peek, {})
+vim.keymap.set('n', '<leader>mt', preCog.toggle, { desc = 'Toggle motions preview' })
+vim.keymap.set('n', '<leader>mp', preCog.peek, { desc = 'Peek motions preview' })

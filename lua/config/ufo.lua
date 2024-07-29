@@ -1,13 +1,10 @@
-vim.o.foldcolumn = '1'
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
 
-require('ufo').setup()
+local ufo = require('ufo')
 
--- Using ufo provider need remap `zR` and `zM`.
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+ufo.setup({})
+
+vim.keymap.set('n', '<leader>zo', ufo.openAllFolds, { desc = 'Open all folds' })
+vim.keymap.set('n', '<leader>zc', ufo.closeAllFolds, { desc = 'Close all folds' })
 
 local lsp_zero = require('lsp-zero')
 
@@ -25,3 +22,5 @@ lsp_zero.set_server_config({
         }
     }
 })
+
+
