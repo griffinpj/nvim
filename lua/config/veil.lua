@@ -40,6 +40,14 @@ local config = {
                     })
                 end,
             },
+            {
+                icon = "󰈆",
+                text = "Quit",
+                shortcut = "q",
+                callback = function()
+                    vim.cmd("q")
+                end,
+            },
         }),
         builtin.sections.oldfiles(),
     },
