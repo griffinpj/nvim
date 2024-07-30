@@ -7,6 +7,7 @@ wk.add({
     { "<leader>m", group = "motions" },
     { "<leader>g", group = "git" },
     { "<leader>l", group = "lazy" },
+    { "<leader>i", group = "icons" },
     { "<leader>r", group = "replace" },
     { "<leader>u", desc = "View undotree" },
     -- { "<leader>fb", function() print("hello") end, desc = "Foobar" },
